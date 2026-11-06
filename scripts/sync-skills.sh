@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # 把本机已安装的 skill 同步到仓库的 skills/ 目录。
-# 先用 `npx skills update -g -y` 更新本机 skill，再运行本脚本。
+# 可用 SKILLS_DIR 指向 Pi 共享目录或 Codex 目录；兼容旧的 CLAUDE_SKILLS_DIR。
+# 同步前先比较版本与 diff，避免用旧副本覆盖仓库中的修复。
 # 用法：./scripts/sync-skills.sh [skill名...]，不传参数则同步 skills/ 下已有的全部 skill。
 #
 # 注意：本脚本只复制 skill 文件，不会改 marketplace / README。
@@ -12,7 +13,7 @@
 set -euo pipefail
 
 repo_dir="$(cd "$(dirname "$0")/.." && pwd)"
-src_dir="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
+src_dir="${SKILLS_DIR:-${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}}"
 
 if [ $# -gt 0 ]; then
   names=("$@")

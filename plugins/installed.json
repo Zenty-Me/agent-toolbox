@@ -1,0 +1,479 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-06T06:48:52+00:00",
+  "scope": "General software development only; installed local versions, not remote latest versions.",
+  "baseRepositoryCommit": "102cd905d5ccf2faed3a543862090871a0a4cffd",
+  "hashConvention": "SHA-256 of sorted [relative POSIX path, SHA-256 of file bytes with CRLF normalized to LF] pairs encoded as compact JSON.",
+  "pi": {
+    "hostVersion": "1.5.0",
+    "packages": [
+      {
+        "name": "pi-web-access",
+        "version": "0.40.0",
+        "configuredSource": "npm:pi-web-access",
+        "pinnedSource": "npm:pi-web-access@0.40.0",
+        "repository": "https://github.com/nicobailon/pi-web-access.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-eybqc4Agn1QZIFggtW0YMIma9K/Jqa6WFPnBQ854yi7GrISs9Lt2kRQmv402CYWaAdSPS8MbMB3kX2d3lZ7KAQ=="
+      },
+      {
+        "name": "pi-subagents",
+        "version": "0.78.0",
+        "configuredSource": "npm:pi-subagents",
+        "pinnedSource": "npm:pi-subagents@0.78.0",
+        "repository": "https://github.com/nicobailon/pi-subagents.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-AsOvPL1xaVFV4bqIlheQKNI2LmAoiAKTPXXxi39/BsWJTdMJIqAkZJ3iLi6bTsh2PZHG7Ur08b7VJOtgAMIAig==",
+        "bundledSkills": [
+          "council-mode",
+          "pi-subagents"
+        ]
+      },
+      {
+        "name": "pi-vision-handoff",
+        "version": "0.10.9",
+        "configuredSource": "npm:pi-vision-handoff",
+        "pinnedSource": "npm:pi-vision-handoff@0.10.9",
+        "repository": "https://github.com/monotykamary/pi-vision-handoff.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-/V06UbeJDPGhvQ+lg7jmPSooMfKCP/ffUFvbSzIXao/SjIY7YALWmdVCW148CTWeDTydlAPvu/02/kiuwHTQgQ=="
+      },
+      {
+        "name": "pi-context-view",
+        "version": "0.7.1",
+        "configuredSource": "npm:pi-context-view",
+        "pinnedSource": "npm:pi-context-view@0.7.1",
+        "repository": "https://github.com/dimk90/pi-context-view.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-74bg+Tb5SOVdjeUSW70I/yieDtAKcNeEETPj5zU3UFWlYnE3NCjGgA/fLCi6vsO9vmwbRcFmCINJBaoksxH1aw=="
+      },
+      {
+        "name": "pi-browser-use",
+        "version": "0.12.12",
+        "configuredSource": "npm:pi-browser-use",
+        "pinnedSource": "npm:pi-browser-use@0.12.12",
+        "repository": "https://github.com/0xPlayerOne/pi-browser-use.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-kAlVRjxHvCINB6sQFy1Ie8+J3Ju3SLW4Ag/F5YkPzkGRtEeXNGnoiEAg3bcGXKVBrHXnFvTgHcjg7vtQSR2wLQ==",
+        "bundledSkills": [
+          "auth-bootstrap",
+          "browser-policy",
+          "derive-client",
+          "dogfood",
+          "gmail-auth",
+          "playwright-handoff",
+          "triage-console",
+          "visual-qa"
+        ]
+      },
+      {
+        "name": "pi-code-render",
+        "version": "0.1.9",
+        "configuredSource": "npm:pi-code-render",
+        "pinnedSource": "npm:pi-code-render@0.1.9",
+        "repository": "https://github.com/chengyayu/pi-code-render.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-GGW0Nxxpnoricn6aL5VX5KxaQ2UJkxvuRccZlyzMbEZOHv+nJ5xB7vJdEpOnrcd26Ir9aqZch+h47nBCMuP0Mw=="
+      },
+      {
+        "name": "pi-better-render",
+        "version": "0.3.0",
+        "configuredSource": "npm:pi-better-render",
+        "pinnedSource": "npm:pi-better-render@0.3.0",
+        "repository": "https://github.com/JeffeyChou/pi-better-render.git",
+        "license": "MIT",
+        "npmIntegrity": "sha512-VgajKukVE7NfTgKQR8478GDH/O+kawXoKKwwLax7JwgHVeysixcnLgfGhlNKGWcleTPLb8gUz6/dqRK2OxFzjg=="
+      },
+      {
+        "name": "pi-switch",
+        "version": "0.4.0",
+        "configuredSource": "local working copy",
+        "repository": "https://github.com/Zenty-Me/pi-switch",
+        "baseCommit": "c42da67734788095807535b1798297d865849927",
+        "modifiedTrackedFiles": [
+          "CHANGELOG.md",
+          "src/tool.ts",
+          "test/apply.test.ts"
+        ],
+        "snapshot": "plugins/pi/pi-switch",
+        "snapshotTreeSha256": "4da3ced5bb1dd554b43e6dc8a8da58f7266e737a757b3f50b31dbbcc40da967a",
+        "license": "MIT"
+      },
+      {
+        "name": "ponytail",
+        "version": "5.3.3",
+        "configuredSource": "git:github.com/DietrichGebert/ponytail",
+        "pinnedSource": "git:github.com/DietrichGebert/ponytail@96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
+        "repository": "https://github.com/DietrichGebert/ponytail",
+        "commit": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
+        "license": "MIT",
+        "bundledSkills": [
+          "ponytail",
+          "ponytail-audit",
+          "ponytail-debt",
+          "ponytail-gain",
+          "ponytail-help",
+          "ponytail-review"
+        ]
+      }
+    ],
+    "localExtensions": [
+      {
+        "name": "compact-status",
+        "source": "~/.pi/agent/extensions/compact-status.ts",
+        "snapshot": "plugins/pi/local-extensions/compact-status.ts",
+        "sha256": "0c583c855b9ca930cbaf897f872afea1b7f24ca1d40faefa9dd1c3bee11633c0"
+      }
+    ]
+  },
+  "claudeCode": {
+    "plugins": [
+      {
+        "id": "code-review@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:27:49.196Z"
+      },
+      {
+        "id": "code-simplifier@claude-plugins-official",
+        "version": "1.0.0",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "df202fe49d81404902cf785b64c1c5f9cc0b0315",
+        "lastUpdated": "2026-09-29T03:11:06.732Z"
+      },
+      {
+        "id": "commit-commands@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:27:52.837Z"
+      },
+      {
+        "id": "context7@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:27:54.736Z"
+      },
+      {
+        "id": "debugging-toolkit@claude-code-workflows",
+        "version": "1.2.1",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "156b7a5e7a8b93642628a339ee4039c925b34c7f",
+        "lastUpdated": "2026-09-29T03:11:37.508Z"
+      },
+      {
+        "id": "feature-dev@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:28:10.741Z"
+      },
+      {
+        "id": "frontend-design@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-10-07T04:57:53.281Z"
+      },
+      {
+        "id": "mattpocock-skills@claude-plugins-official",
+        "version": "1.2.3",
+        "scope": "user",
+        "configuredEnabled": true,
+        "commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+        "lastUpdated": "2026-10-10T01:01:41.429Z"
+      },
+      {
+        "id": "playwright@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:28:22.571Z"
+      },
+      {
+        "id": "ponytail@ponytail",
+        "version": "5.1.0",
+        "scope": "user",
+        "configuredEnabled": true,
+        "commit": "9cc65d03aa2da1db7121b912d03596409ee340b8",
+        "lastUpdated": "2026-10-09T08:21:53.400Z"
+      },
+      {
+        "id": "postgres-best-practices@supabase-agent-skills",
+        "version": "544bfc56c89a",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "544bfc56c89afe2b87b20017a59b2c6e9502a1fb",
+        "lastUpdated": "2026-09-29T03:11:35.524Z"
+      },
+      {
+        "id": "pr-review-toolkit@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:28:37.703Z"
+      },
+      {
+        "id": "ralph-loop@claude-plugins-official",
+        "version": "1.0.0",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "76b35e91d1c99c090b1a08dade53bcc5e352c1b2",
+        "lastUpdated": "2026-05-08T04:33:37.220Z"
+      },
+      {
+        "id": "security-guidance@claude-plugins-official",
+        "version": "2.0.8",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "df202fe49d81404902cf785b64c1c5f9cc0b0315",
+        "lastUpdated": "2026-09-29T03:16:13.126Z"
+      },
+      {
+        "id": "skill-creator@claude-plugins-official",
+        "version": "fbe07fb6ce7d",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+        "lastUpdated": "2026-09-29T03:28:43.548Z"
+      },
+      {
+        "id": "supabase@supabase-agent-skills",
+        "version": "544bfc56c89a",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "544bfc56c89afe2b87b20017a59b2c6e9502a1fb",
+        "lastUpdated": "2026-09-29T03:11:33.342Z"
+      },
+      {
+        "id": "superpowers@claude-plugins-official",
+        "version": "6.4.1",
+        "scope": "user",
+        "configuredEnabled": null,
+        "commit": "6fd4507659784c351abbd2bc264c7162cfd386dc",
+        "lastUpdated": "2026-09-29T03:16:11.084Z"
+      },
+      {
+        "id": "warp@claude-code-warp",
+        "version": "2.4.0",
+        "scope": "user",
+        "configuredEnabled": true,
+        "commit": "53ab8d63ef74d7653002444762812d2fb5639eee",
+        "lastUpdated": "2026-10-29T01:01:42.201Z"
+      }
+    ],
+    "marketplaces": {
+      "anthropic-agent-skills": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      },
+      "claude-code-warp": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      },
+      "claude-code-workflows": {
+        "source": "github",
+        "repo": "wshobson/agents"
+      },
+      "claude-plugins-official": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      },
+      "humanizer": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      },
+      "planning-with-files": {
+        "source": "github",
+        "repo": "OthmanAdi/planning-with-files"
+      },
+      "ponytail": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      },
+      "supabase-agent-skills": {
+        "source": "github",
+        "repo": "supabase/agent-skills"
+      },
+      "web-access": {
+        "source": "git",
+        "url": "https://github.com/eze-is/web-access.git"
+      }
+    },
+    "stateNote": "configuredEnabled=null means present in the installation registry without an explicit enabledPlugins entry; it is not proof of a loaded plugin."
+  },
+  "codex": {
+    "plugins": [
+      {
+        "id": "browser@openai-bundled",
+        "version": "26.1023.50603",
+        "configuredEnabled": true,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "chrome@openai-bundled",
+        "version": "26.1023.50603",
+        "configuredEnabled": true,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "codex-app-tools@openai-bundled",
+        "version": "26.1023.50603",
+        "configuredEnabled": true,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "computer-use@openai-bundled",
+        "version": "26.1023.50603",
+        "configuredEnabled": true,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "unified-computer-use@openai-bundled",
+        "version": "26.1023.50603",
+        "configuredEnabled": true,
+        "license": "not specified in installed manifest",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "visualize@openai-bundled",
+        "version": "1.0.57",
+        "configuredEnabled": true,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "plugin-management@openai-curated-remote",
+        "version": "0.1.0",
+        "configuredEnabled": null,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "sites@openai-curated-remote",
+        "version": "1.1.2",
+        "configuredEnabled": null,
+        "license": "Proprietary",
+        "sourceCodeArchived": false
+      },
+      {
+        "id": "ponytail@ponytail",
+        "version": "4.10.0",
+        "configuredEnabled": null,
+        "license": "MIT",
+        "sourceCodeArchived": false
+      }
+    ],
+    "stateNote": "Configured state comes from config.toml; cache presence alone is not proof of an enabled or loaded plugin."
+  },
+  "syncedSkills": [
+    {
+      "name": "concept-first-tutorial",
+      "source": "~/.codex/skills/concept-first-tutorial",
+      "upstream": "local; upstream not recorded",
+      "sourceTreeSha256": "99dbe891f9d989a993f50dddf4718fad8c4053eda94045317c32c411a88271a7",
+      "snapshotTreeSha256": "99dbe891f9d989a993f50dddf4718fad8c4053eda94045317c32c411a88271a7",
+      "action": "added"
+    },
+    {
+      "name": "find-skills",
+      "source": "~/.agents/skills/find-skills",
+      "upstream": "vercel-labs/skills",
+      "sourceTreeSha256": "d4abe1b2572d64a1a3769d1cddc82f32e74ef6ce4e99afc9bce2e03cb1eb274d",
+      "snapshotTreeSha256": "5fd5599efbbc5e76fa91c63f1635badd6030342fe23c43c9e59b70fb7fd91127",
+      "licenseSource": "https://raw.githubusercontent.com/vercel-labs/skills/main/LICENSE",
+      "action": "added"
+    },
+    {
+      "name": "ponytail",
+      "source": "Pi package ponytail/skills/ponytail",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "522ca1a049b1f2f7d40478345746fbb16e3fe5ad0009f3990197646a1c004642",
+      "snapshotTreeSha256": "677bfcbf38eb3c323e60b1eec41f7b674145a6e82702cf1705dd8cd8b4843e48",
+      "action": "added"
+    },
+    {
+      "name": "ponytail-audit",
+      "source": "Pi package ponytail/skills/ponytail-audit",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "5b7c21eebc89b4cf25ac69c6ea6cc965a96cd745ffcd13046aed7a015297dbec",
+      "snapshotTreeSha256": "279a33b83892e268dc20ef035c613483eb8c9753e180cd0ea70447ee058f906f",
+      "action": "added"
+    },
+    {
+      "name": "ponytail-debt",
+      "source": "Pi package ponytail/skills/ponytail-debt",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "35683c9a4e4cdf568ddd24b7f7e806ff803c5d6d404d7b68b9fb1425050ccbbe",
+      "snapshotTreeSha256": "f16853e931db29458fd9aa50184080a8c14ba15b884aecc139be7c375931bcaa",
+      "action": "added"
+    },
+    {
+      "name": "ponytail-gain",
+      "source": "Pi package ponytail/skills/ponytail-gain",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "33e9adf325b6f7ab99e7e4042bdce06ffcc6135674e932c1b3b34ef83dd4bbe1",
+      "snapshotTreeSha256": "f93482c9b50ba6d6c94b8bb798deff10bd3ad1976312dc747d4f0db5b49098a3",
+      "action": "added"
+    },
+    {
+      "name": "ponytail-help",
+      "source": "Pi package ponytail/skills/ponytail-help",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "1a9631e8fc66b9319a1dd1cf356a65c98652858650ec726d9b08f8e77f5562ed",
+      "snapshotTreeSha256": "2a186a167bc80aeb27644139686684bc0e96c4bb883d73fcb3f2cb5609ba4a0f",
+      "action": "added"
+    },
+    {
+      "name": "ponytail-review",
+      "source": "Pi package ponytail/skills/ponytail-review",
+      "upstream": "DietrichGebert/ponytail",
+      "sourceTreeSha256": "81368dc8cd168a11e00953150ced0ad9c0d1599bc61c27747bec0c5d276da8af",
+      "snapshotTreeSha256": "e095e0349f1a9d09413ed11de3756274a84da2fd5d4e813aeb46b038cae55d91",
+      "action": "added"
+    },
+    {
+      "name": "grilling",
+      "source": "~/.agents/skills/grilling",
+      "upstream": "mattpocock/skills",
+      "action": "updated",
+      "sourceTreeSha256": "c463859e08ff0aa7338f73ddc114e6de955112912537795970dae9f130753c41",
+      "snapshotTreeSha256": "cf0d97697ce53169eddf15c64be7a37b954dc8b26ccfa4b6b4ddbf1b413b2336"
+    }
+  ],
+  "preservedRepositoryVersions": {
+    "clean-code": "Repository matches Claude Code; shared/Codex copies are older variants.",
+    "frontend-design": "Repository matches Claude Code; shared/Codex copies are older variants.",
+    "drawio-skill": "Repository includes newer diagram IR / MCP fixes than shared/Claude/Codex copies.",
+    "nextjs": "Keep repository reference-path fixes and local overlay.",
+    "karpathy-guidelines": "Difference is a final newline only.",
+    "brainstorming": "Repository has newer upstream content than the cached Superpowers copy.",
+    "systematic-debugging": "Keep repository variant and bundled references; cached Superpowers copy differs.",
+    "test-driven-development": "Repository uses addyosmani/agent-skills; cached Superpowers is a different upstream variant.",
+    "react-best-practices": "Old duplicate intentionally removed upstream; use vercel-react-best-practices.",
+    "skill-creator": "Anthropic skill retained; Codex system skill with the same name belongs to another implementation."
+  },
+  "excludedCategories": [
+    "Platform-specific business skills",
+    "Academic writing and publication",
+    "Personal knowledge bases and support operations",
+    "Repository-specific review orchestration and Codex testing guidance",
+    "Bundled office, media, and pet plugins",
+    "Credentials, session history, databases, caches, and node_modules"
+  ]
+}

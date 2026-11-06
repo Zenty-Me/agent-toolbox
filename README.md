@@ -1,13 +1,13 @@
 # Agent Dev Kit
 
-AI 协同开发工具箱：精选 Claude Code / Agent skills、实用插件与可复用提示词，以及 AI 编码工具的使用笔记。
+AI 协同开发工具箱：精选 Claude Code / Pi / Codex 通用开发 skills、实用插件与可复用提示词，以及 AI 编码工具的使用笔记。
 
 > 仓库由 `skills-prompts` 更名为 `agent-dev-kit`；GitHub 会对旧路径做重定向，新安装请用下方命令。
 
 | 目录 | 内容 |
 |---|---|
 | **skills/** | 从各官方仓库精选的开发类 skill，可通过 Claude Code 插件市场一键安装 |
-| **plugins/** | 推荐的 Claude Code 插件清单（不存源码，只记安装方式） |
+| **plugins/** | 各 agent 的插件推荐、本机版本清单与 Pi 本地扩展源码快照 |
 | **prompts/** | 可直接当系统提示词使用的角色提示词 |
 | **agents-learning/** | Claude Code、Pi、Hermes 等工具的使用笔记 |
 
@@ -16,9 +16,13 @@ AI 协同开发工具箱：精选 Claude Code / Agent skills、实用插件与�
 ```
 agent-dev-kit/
 ├── .claude-plugin/
-│   └── marketplace.json   # Claude Code 插件市场配置（按用途分成 6 个插件）
-├── skills/                # skill 定义（每个目录一个 skill；含各自 LICENSE）
-├── plugins/               # 推荐插件清单与安装方式
+│   └── marketplace.json   # Claude Code 插件市场配置（按用途分成 7 个插件）
+├── skills/                # 通用开发 skill 定义（每个目录一个 skill）
+├── plugins/
+│   ├── README.md          # 各 agent 插件推荐与安装方式
+│   ├── installed.json     # 本机 Pi / Claude Code / Codex 开发插件版本与来源
+│   ├── local-sync.md      # 本次扫描、版本比较与 skill 同步记录
+│   └── pi/               # Pi 恢复说明、Pi Switch 与本地状态栏源码
 ├── prompts/               # 提示词模板
 ├── agents-learning/       # AI 编码工具使用笔记
 ├── scripts/
@@ -39,12 +43,13 @@ agent-dev-kit/
 
 | 插件 | 包含的 skill |
 |---|---|
-| `coding-standards@agent-dev-kit` | karpathy-guidelines、clean-code、humanizer |
+| `coding-standards@agent-dev-kit` | karpathy-guidelines、clean-code、humanizer、concept-first-tutorial |
 | `code-quality@agent-dev-kit` | code-reviewer、refactor-advisor、security-best-practices、security-threat-model、code-simplification、test-driven-development、systematic-debugging |
 | `planning@agent-dev-kit` | brainstorming、grill-me、grilling、drawio-skill |
 | `frontend@agent-dev-kit` | frontend-design、nextjs、vercel-react-best-practices、vercel-composition-patterns、web-design-guidelines、vercel-react-view-transitions |
 | `backend@agent-dev-kit` | supabase、supabase-postgres-best-practices、python-performance-optimization |
-| `skill-dev@agent-dev-kit` | skill-creator、mcp-builder |
+| `skill-dev@agent-dev-kit` | skill-creator、mcp-builder、find-skills |
+| `ponytail-skills@agent-dev-kit` | ponytail、ponytail-review、ponytail-audit、ponytail-debt、ponytail-gain、ponytail-help |
 
 ```bash
 /plugin install frontend@agent-dev-kit
@@ -52,9 +57,11 @@ agent-dev-kit/
 
 更新：`/plugin marketplace update agent-dev-kit`。
 
+`ponytail-skills` 提供 Ponytail 5.3.3 的六个技能。自动启用、状态栏与 hooks 由 [Ponytail 原插件](https://github.com/DietrichGebert/ponytail) 提供；已装原插件时避免重复安装同名 skills。
+
 ### 方式二：skills CLI
 
-支持 Claude Code、Codex、Cursor 等多种 AI 工具：
+支持 Pi、Claude Code、Codex、Cursor 等多种 AI 工具：
 
 ```bash
 npx skills add Zenty-Me/agent-dev-kit                      # 交互式选择
@@ -63,7 +70,7 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 
 ### 方式三：手动复制
 
-把 `skills/` 下需要的目录复制到 `~/.claude/skills/`（全局）或项目的 `.claude/skills/`（仅当前项目）。
+把 `skills/` 下需要的目录复制到 `~/.agents/skills/`（Pi 等支持的共享目录）、`~/.claude/skills/` 或 `~/.codex/skills/`。也可以放到项目中对应的 skills 目录；按需挑选，避免与已安装插件里的同名 skill 重复。
 
 ## Skills 列表
 
@@ -72,6 +79,7 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 | 编码与写作准则 | `karpathy-guidelines` | 基于 Andrej Karpathy 观察总结的 LLM 编码行为准则 | forrestchang/andrej-karpathy-skills |
 | | `clean-code` | 简洁直接的编码规范，不过度设计 | vudovn/ag-kit |
 | | `humanizer` | 去掉文字里的 AI 腔，读起来像本人写的，不改变原意 | blader/humanizer |
+| | `concept-first-tutorial` | 用解释、小例子与最小代码编写技术教程 | 本机 Codex 自定义 skill |
 | 代码质量 | `code-reviewer` | 关注安全、性能和最佳实践的代码审查 | awesome-llm-apps（Shubhamsaboo 等） |
 | | `refactor-advisor` | 识别代码坏味道并给出重构方案 | 本仓库原创 |
 | | `security-best-practices` | 按语言和框架做安全最佳实践审查 | openai/skills |
@@ -94,11 +102,18 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 | | `python-performance-optimization` | Python 性能分析与优化 | wshobson/agents |
 | Skill 开发 | `skill-creator` | 创建、改进、评测 skill | anthropics/skills |
 | | `mcp-builder` | 设计并实现高质量 MCP server（Python/TS） | anthropics/skills |
+| | `find-skills` | 查找并安装可复用的 agent skills | vercel-labs/skills |
+| 最小实现与审查 | `ponytail` | 用最小完整改动完成开发任务 | DietrichGebert/ponytail 5.3.3 |
+| | `ponytail-review` | 审查变更的正确性、安全、负载与代码精简空间 | DietrichGebert/ponytail 5.3.3 |
+| | `ponytail-audit` | 按风险审计整个仓库 | DietrichGebert/ponytail 5.3.3 |
+| | `ponytail-debt` | 汇总 shortcut / ponytail 注释中的技术债 | DietrichGebert/ponytail 5.3.3 |
+| | `ponytail-gain` | 展示上游发布的基准测试结果 | DietrichGebert/ponytail 5.3.3 |
+| | `ponytail-help` | 模式、技能与命令速查 | DietrichGebert/ponytail 5.3.3 |
 
 **版权与许可证**
 
 - 根目录 [LICENSE](LICENSE)（MIT）覆盖本仓库**原创**内容：`README`、`prompts/`、`plugins/`、`scripts/`、marketplace 配置，以及本仓库原创 skill（如 `refactor-advisor`）。
-- `skills/` 下各 skill **版权归原作者**；许可证以各目录 `LICENSE` / `LICENSE.txt` 为准，并参考 `SKILL.md` 的 `license` 字段。收录与再分发请遵守对应上游条款。
+- `skills/` 下各 skill **版权归原作者**；许可证以各目录 `LICENSE` / `LICENSE.txt` 为准，并参考 `SKILL.md` 的 `license` 字段。收录与再分发请遵守对应上游条款；本机安装未附许可证的项目在[同步记录](plugins/local-sync.md)中注明。
 - 已去掉与 `vercel-react-best-practices` 重复的旧 `react-best-practices` 打包；前端性能规则以 Vercel 官方 skill 为准。
 
 ## Prompts
@@ -133,6 +148,8 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 
 [plugins/README.md](plugins/README.md) 按 agent 分区，收录 **Claude Code、Codex、Pi、Cursor、Gemini CLI、OpenCode** 的插件和扩展。每个分区写明该 agent 的扩展机制、推荐条目和安装命令；另有一节支持多种 agent 的通用工具（记忆、通知、多会话管理）。
 
+当前本机扫描见[同步记录](plugins/local-sync.md)与[版本清单](plugins/installed.json)。[Pi 插件恢复说明](plugins/pi/README.md)记录 9 个包的精确版本、安装来源，并保存 Pi Switch 与 compact-status 的源码快照。
+
 ## 使用笔记
 
 - [Claude Code](agents-learning/claude-code.md)：优先用本仓库 / 官方 marketplace 安装；附 `opusplan` / 子代理 model / `/advisor`、[子 agent 配置](agents-learning/claude-code.md#子-agent-配置)
@@ -149,11 +166,12 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 
 ```bash
 npx skills update -g -y            # 从官方源更新本机 skill
-./scripts/sync-skills.sh           # 同步 skills/ 下已有的全部 skill
-./scripts/sync-skills.sh nextjs    # 只同步指定 skill
+./scripts/sync-skills.sh           # 默认读取 ~/.claude/skills
+SKILLS_DIR="$HOME/.agents/skills" ./scripts/sync-skills.sh grilling  # Pi 共享目录
+SKILLS_DIR="$HOME/.codex/skills" ./scripts/sync-skills.sh concept-first-tutorial
 ```
 
-`sync-skills.sh` **只复制** `~/.claude/skills`（或 `CLAUDE_SKILLS_DIR`）里的目录内容。新增或下线 skill 时，还须**手动**更新：
+`sync-skills.sh` **只复制**选定来源目录里的内容，优先使用 `SKILLS_DIR`，兼容旧的 `CLAUDE_SKILLS_DIR`，默认 `~/.claude/skills`。执行前先核对来源版本与 diff；不同宿主可能保留较旧版本、同名不同实现或本地修复，不应整库覆盖。新增或下线 skill 时，还须**手动**更新：
 
 1. `.claude-plugin/marketplace.json` 对应插件的 `skills` 列表
 2. 上文「安装 Skills」插件表与「Skills 列表」

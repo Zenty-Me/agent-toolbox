@@ -1,0 +1,4 @@
+interface:
+  display_name: "概念优先教程改写"
+  short_description: "讲清概念与常用 API，精简代码，并在每个代码小节保留必要注释"
+  default_prompt: "使用 $concept-first-tutorial 改写指定教程章节，讲清概念和首次使用的常用 API，精简代码，在每个有代码的小节补充必要注释，并提供有答案的自测。"

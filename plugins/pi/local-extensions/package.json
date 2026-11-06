@@ -1,0 +1,19 @@
+{
+  "name": "agent-dev-kit-local-extensions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Snapshot of the locally used Pi compact status footer",
+  "license": "MIT",
+  "pi": {
+    "extensions": ["./compact-status.ts"]
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": ">=1.5.0 <2",
+    "@earendil-works/pi-coding-agent": ">=1.5.0 <2",
+    "@earendil-works/pi-tui": ">=1.5.0 <2"
+  }
+}

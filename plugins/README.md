@@ -1,6 +1,8 @@
 # Agent 插件与扩展清单
 
-插件通过各 agent 自己的 marketplace / 包管理安装，本仓库不保存源码。只收**日常开发实用**、仓库存在且近期还在维护的条目（核实日期：2026-10-14）；不全量镜像各官方目录。体验向（hooks / 状态栏 / 记忆 / 主题）见 Claude Code 章节的「Agent 使用体验」。
+插件通过各 agent 自己的 marketplace / 包管理安装。本页收**日常开发实用**、仓库存在且近期还在维护的推荐条目（核实日期：2026-10-14），不全量镜像各官方目录。体验向（hooks / 状态栏 / 记忆 / 主题）见 Claude Code 章节的「Agent 使用体验」。
+
+本机实际安装版本另见[同步记录](local-sync.md)与[机器可读清单](installed.json)；[Pi 目录](pi/README.md)提供精确版本恢复命令，并归档 Pi Switch 和 compact-status 本地源码。
 
 | Agent | 扩展机制 | 跳转 |
 |---|---|---|
@@ -13,6 +15,8 @@
 | 多种 agent 通用 | 独立 CLI / hooks / MCP | [跨 agent 通用工具](#跨-agent-通用工具) |
 
 ## Claude Code
+
+本机显式开启的插件为 Matt Pocock Skills 1.2.3、Ponytail 5.1.0、Warp 2.4.0；其余已登记安装项的版本与配置状态见[同步记录](local-sync.md#claude-code)。
 
 ### 安装方式
 
@@ -37,6 +41,7 @@
 | claude-code-workflows | wshobson/agents | 多 harness 工作流与开发插件合集 |
 | planning-with-files | OthmanAdi/planning-with-files | 文件化持久计划 |
 | ponytail | DietrichGebert/ponytail | 强制最简实现 |
+| claude-code-warp | warpdotdev/claude-code-warp | Warp 终端通知与集成 |
 
 > 多数第三方插件也可直接从 `claude-plugins-official` 安装（例如 `github@claude-plugins-official`）。若某插件同时出现在专用 marketplace，任选其一即可。
 >
@@ -59,6 +64,7 @@
 | `planning-with-files@planning-with-files` | 用项目文件持久化开发计划，hooks 注入计划上下文 |
 | `ralph-loop@claude-plugins-official` | 循环迭代同一提示直到完成（Ralph Wiggum 技法）；做法见 [autonomous-iteration.md](../agents-learning/autonomous-iteration.md) |
 | `ponytail@ponytail` | 强制最简实现：YAGNI、优先标准库、不做多余抽象 |
+| `mattpocock-skills@claude-plugins-official` | Matt Pocock 的方案追问、规格/工单、TDD、架构与代码审查技能包 |
 | `code-modernization@claude-plugins-official` | 遗留代码现代化：评估、业务规则挖掘、改造/重写与验证 |
 | `claude-code-setup@claude-plugins-official` | 分析仓库并推荐 hooks、skills、MCP、subagent 等自动化 |
 | `claude-md-management@claude-plugins-official` | 维护 CLAUDE.md：质量审计、沉淀会话学习、保持项目记忆 |
@@ -249,6 +255,8 @@
 
 ## Codex
 
+本机扫描到的开发插件与启用配置见[同步记录](local-sync.md#codex)。浏览器、可视化等桌面运行时插件由宿主管理；缓存中的 Ponytail 4.10.0 未在当前配置中显式启用。
+
 机制（见 [官方文档](https://developers.openai.com/codex/plugins)）：插件可打包 skills、MCP server、hooks。在 Codex CLI 里输入 `/plugins` 打开插件浏览器，或用命令行 `codex plugin add <插件>@<marketplace>`；第三方 marketplace 用 `codex plugin marketplace add owner/repo` 添加。官方 marketplace 名为 `openai-curated`，源码在 [openai/plugins](https://github.com/openai/plugins)。单个 skill 可在 Codex 里用 `$skill-installer <名称>` 从 [openai/skills](https://github.com/openai/skills) 安装；MCP 用 `codex mcp add`。插件装好后要新开会话才生效。IDE 扩展不支持插件。
 
 | 插件 | 来源 | 说明 | 安装 |
@@ -266,6 +274,8 @@
 > 用 API key 登录的 Codex 只能装一部分官方插件（有些插件需要 OAuth）。本仓库的 skills 也可以用 `npx skills add Zenty-Me/agent-dev-kit` 装进 Codex。
 
 ## Pi
+
+当前使用的 **9 个包 + 1 个本地状态栏扩展**见 [Pi 插件快照与恢复](pi/README.md)：涵盖搜索、子代理、视觉、浏览器、上下文查看、渲染、Pi Switch 与 Ponytail，记录精确版本和 Git commit。
 
 机制（见 [packages 文档](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md)；目录 [pi.dev/packages](https://pi.dev/packages)）：pi package 把 extensions、skills、prompt、themes 打成包。安装：`pi install npm:<包名>` / `pi install git:github.com/<owner>/<repo>`；`pi list` / `pi remove`；`-l` 写项目级 `.pi/settings.json`；`pi -e npm:<包名>` 仅本次试用。扩展会执行代码，装前看源码。
 
