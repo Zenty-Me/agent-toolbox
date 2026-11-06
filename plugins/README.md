@@ -271,7 +271,7 @@
 | `figma` / `linear` / `notion` | [openai/plugins](https://github.com/openai/plugins/tree/main/plugins) | 设计稿、事务跟踪、文档知识库 | `codex plugin add figma@openai-curated` 等 |
 | `plugin-eval` | [openai/plugins](https://github.com/openai/plugins/tree/main/plugins/plugin-eval) | 评测自己写的 Codex 插件 | `codex plugin add plugin-eval@openai-curated` |
 
-> 用 API key 登录的 Codex 只能装一部分官方插件（有些插件需要 OAuth）。本仓库的 skills 也可以用 `npx skills add Zenty-Me/agent-dev-kit` 装进 Codex。
+> 用 API key 登录的 Codex 只能装一部分官方插件（有些插件需要 OAuth）。本仓库 [Codex 分区](../codex/README.md) 的 skills 可用 `npx skills add https://github.com/Zenty-Me/agent-toolbox/tree/main/codex/skills` 安装。
 
 ## Pi
 
@@ -366,7 +366,7 @@
 | `github` / `playwright` | [cursor/plugins](https://github.com/cursor/plugins/tree/main/third_party) | GitHub 仓库/PR/Actions；真实浏览器操作与测试 | 同上 |
 | `create-plugin` | [cursor/plugins](https://github.com/cursor/plugins/tree/main/create-plugin) | 生成并校验新插件的骨架 | 同上 |
 
-> 本仓库 skills 可用 `npx skills add Zenty-Me/agent-dev-kit` 装进 Cursor。
+> Cursor 可从 [Agent Toolbox](https://github.com/Zenty-Me/agent-toolbox) 选择合适的 skills 分区安装，避免一次导入三个分区的同名技能。
 
 ## Gemini CLI
 

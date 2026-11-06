@@ -1,9 +1,9 @@
 {
-  "name": "agent-dev-kit",
+  "name": "agent-toolbox",
   "owner": { "name": "Zenty-Me" },
   "metadata": {
     "description": "按 agent 分区的开发与日常能力同步库；本市场安装 Claude Code 分区的 skills",
-    "version": "2.0.0"
+    "version": "3.0.0"
   },
   "plugins": [
     {

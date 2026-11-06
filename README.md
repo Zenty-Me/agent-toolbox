@@ -1,8 +1,8 @@
-# Agent Dev Kit
+# Agent Toolbox
 
 按 **Pi、Claude Code、Codex** 分区维护的个人能力同步库，保留跨项目可复用的开发和日常使用插件、skills、提示词与使用笔记。各 agent 可以重复收录同一能力，并独立记录版本和安装方式。
 
-仓库原名 `skills-prompts`，GitHub 会重定向旧地址；新安装使用 `Zenty-Me/agent-dev-kit`。
+仓库曾用名为 `skills-prompts` 和 `agent-dev-kit`。新地址为 [Zenty-Me/agent-toolbox](https://github.com/Zenty-Me/agent-toolbox)，marketplace 名称统一为 `agent-toolbox`；已有安装见 [旧 marketplace 迁移](claude-code/README.md#marketplace-migration)。
 
 ## 按 agent 使用
 
@@ -17,7 +17,7 @@ Ponytail 全套六个 skills、grill-me / grilling、技术教程、写作和日
 ## 项目结构
 
 ```text
-agent-dev-kit/
+agent-toolbox/
 ├── pi/
 │   ├── README.md
 │   ├── plugins.json
@@ -49,12 +49,12 @@ agent-dev-kit/
 pi install ./pi
 ```
 
-Claude Code 使用原有 marketplace 和插件组名称，安装路径已切换到 Claude Code 分区：
+Claude Code 使用 `agent-toolbox` marketplace，插件组名称保持原有分类，安装内容来自 Claude Code 分区：
 
 ```text
-/plugin marketplace add Zenty-Me/agent-dev-kit
-/plugin install planning@agent-dev-kit
-/plugin install ponytail-skills@agent-dev-kit
+/plugin marketplace add Zenty-Me/agent-toolbox
+/plugin install planning@agent-toolbox
+/plugin install ponytail-skills@agent-toolbox
 ```
 
 Codex 可预览并复制选定技能；执行时加 `--apply`：
@@ -65,6 +65,17 @@ python scripts/sync_skills.py codex export grill-me grilling --apply
 ```
 
 每个分区的完整安装方式、插件清单和技能来源见其 README。插件自带技能与本库的独立副本可按需选用，同一宿主避免重复加载。
+
+## 从旧仓库名迁移
+
+已有 Git checkout 可更新远程地址：
+
+```bash
+git remote set-url origin https://github.com/Zenty-Me/agent-toolbox.git
+git pull --ff-only
+```
+
+旧 GitHub 地址由平台重定向，后续 clone、链接和安装统一使用新地址。GitHub 仓库重定向不会迁移 Claude Code 的 marketplace 标识；按 [Claude Code 迁移说明](claude-code/README.md#marketplace-migration)处理旧的 `@agent-dev-kit` 或 `@skills-prompts` 安装。
 
 ## 补齐与同步
 

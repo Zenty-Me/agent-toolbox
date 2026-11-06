@@ -1,5 +1,5 @@
 {
-  "name": "agent-dev-kit-pi-skills",
+  "name": "agent-toolbox-pi-skills",
   "version": "2.0.0",
   "private": true,
   "description": "Pi development and everyday skill collection; external plugins are listed in plugins.json",

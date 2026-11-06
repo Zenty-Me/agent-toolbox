@@ -4,7 +4,7 @@
 
 ## 当前目录与历史范围
 
-本页是首次盘点的历史记录；后续整理已将能力分为 [Pi](../pi/README.md)、[Claude Code](../claude-code/README.md)、[Codex](../codex/README.md)。每区保存独立 skills 与 plugins.json，开发和日常使用内容均保留。来源核对与先补齐本地再同步的结果见[完整性说明](completeness.md)。
+本页是首次盘点的历史记录；其中 `agent-dev-kit` 是当时的仓库和 marketplace 名称，现已更名为 [Agent Toolbox](https://github.com/Zenty-Me/agent-toolbox)，旧安装见 [marketplace 迁移说明](../claude-code/README.md#marketplace-migration)。后续整理已将能力分为 [Pi](../pi/README.md)、[Claude Code](../claude-code/README.md)、[Codex](../codex/README.md)。每区保存独立 skills 与 plugins.json，开发和日常使用内容均保留。来源核对与先补齐本地再同步的结果见[完整性说明](completeness.md)。
 
 首次盘点曾保存 Pi Switch 工作副本；按后续确认现已移除重复源码，仅保留[项目地址](https://github.com/Zenty-Me/pi-switch)与安装记录，旧快照可从提交 `061e55c` 恢复。
 

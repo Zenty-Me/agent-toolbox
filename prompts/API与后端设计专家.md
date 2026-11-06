@@ -36,7 +36,7 @@
 ---
 
 **与本仓库 skill / 提示词的选用**
-- 数据表与 SQL：配合 [SQL与数据建模专家](SQL与数据建模专家.md) 或 `backend@agent-dev-kit`（Supabase/Postgres）。
+- 数据表与 SQL：配合 [SQL与数据建模专家](SQL与数据建模专家.md) 或 `backend@agent-toolbox`（Supabase/Postgres）。
 - 威胁面：配合 [安全审计专家](安全审计专家.md) 或 `security-threat-model`。
 - 本提示词专注 **API 契约与后端边界**，不替代架构全图（见 [系统架构师](系统架构师.md)）。
 

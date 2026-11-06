@@ -8,14 +8,16 @@
 
 长跑自主迭代（Ralph 插件、`max-iterations`、外层 bash 换新上下文）见 [自主持续迭代](autonomous-iteration.md)。
 
-本仓库 skills（marketplace 名 `agent-dev-kit`）：
+本仓库 skills（marketplace 名 `agent-toolbox`）：
 
 ```bash
-/plugin marketplace add Zenty-Me/agent-dev-kit
-/plugin install frontend@agent-dev-kit
+/plugin marketplace add Zenty-Me/agent-toolbox
+/plugin install frontend@agent-toolbox
 # 其他：coding-standards / code-quality / planning / backend / skill-dev
-/plugin marketplace update agent-dev-kit
+/plugin marketplace update agent-toolbox
 ```
+
+已安装旧名称时，见 [marketplace 迁移说明](../claude-code/README.md#marketplace-migration)。
 
 官方目录与常用插件：
 
@@ -25,11 +27,11 @@
 /plugin install superpowers@claude-plugins-official
 ```
 
-也可用 skills CLI（兼容 Claude Code / Codex / Cursor 等）：
+也可用 skills CLI 安装指定分区（以下选择 Claude Code 分区）：
 
 ```bash
-npx skills add Zenty-Me/agent-dev-kit
-npx skills add Zenty-Me/agent-dev-kit -s vercel-react-best-practices -g
+npx skills add https://github.com/Zenty-Me/agent-toolbox/tree/main/claude-code/skills
+npx skills add https://github.com/Zenty-Me/agent-toolbox/tree/main/claude-code/skills -s vercel-react-best-practices -g
 ```
 
 ## 体验向起步（hooks / 状态栏 / 记忆）

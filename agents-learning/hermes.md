@@ -49,7 +49,7 @@ hermes sessions stats
 
 1. **先 browse 再 delete**：不确定 id 时用 `sessions browse`，避免误删。
 2. **定期 prune**：本地会话多了会占磁盘；用 `stats` 看体量再决定 `--older-than`。
-3. **与本仓库 skills**：Hermes 若支持 Agent Skills，可用 `npx skills add Zenty-Me/agent-dev-kit` 安装本仓库 skill（见根 README）；Claude Code 用户优先用 marketplace。
+3. **与本仓库 skills**：Hermes 若支持 Agent Skills，可从 [Agent Toolbox](https://github.com/Zenty-Me/agent-toolbox) 选择合适的 skills 分区复制安装（见根 README）；Claude Code 用户优先用 marketplace。
 4. **模型切不过时**：检查 API Key / 供应商配置是否仍有效，再跑 `hermes model`。
 
 ## 相关

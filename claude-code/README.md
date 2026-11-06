@@ -6,15 +6,15 @@
 
 ## 安装与更新
 
-本仓库的 marketplace 只指向 Claude Code 分区：
+本仓库的 `agent-toolbox` marketplace 只指向 Claude Code 分区：
 
 ```text
-/plugin marketplace add Zenty-Me/agent-dev-kit
-/plugin install planning@agent-dev-kit
-/plugin install ponytail-skills@agent-dev-kit
+/plugin marketplace add Zenty-Me/agent-toolbox
+/plugin install planning@agent-toolbox
+/plugin install ponytail-skills@agent-toolbox
 ```
 
-可用组：coding-standards、code-quality、planning、frontend、backend、skill-dev、ponytail-skills。更新用 `/plugin marketplace update agent-dev-kit`，然后按宿主提示重新加载。
+可用组：coding-standards、code-quality、planning、frontend、backend、skill-dev、ponytail-skills。更新用 `/plugin marketplace update agent-toolbox`，然后按宿主提示重新加载。
 
 Ponytail 六个技能和 grill-me / grilling 均保留。需要 Ponytail 的自动启用、状态栏和 hooks 时安装上游完整插件；已装完整插件时避免在同一 Claude 会话重复加载本库的同名技能。
 
@@ -26,6 +26,20 @@ python scripts/sync_skills.py claude-code export grill-me grilling --apply
 ```
 
 插件清单保留原机器的观察版本。`configuredEnabled` 为 null 表示没有显式启用记录，不作为新机器必须安装的清单。
+
+<a id="marketplace-migration"></a>
+
+## 旧 marketplace 迁移
+
+marketplace 已从 `agent-dev-kit` 更名为 `agent-toolbox`。GitHub 地址重定向不会把已安装的 `插件组@agent-dev-kit` 自动改为新标识。更早的 `skills-prompts` 安装也按相同步骤迁移。
+
+1. 在 Claude Code 的 `/plugin` 面板记录本库已安装的插件组、安装范围（用户或项目）和启用状态。
+2. 卸载这些插件组的旧 `@agent-dev-kit` 或 `@skills-prompts` 安装，再移除对应的旧 marketplace。
+3. 添加新 marketplace：`/plugin marketplace add Zenty-Me/agent-toolbox`。
+4. 按原来的范围重装需要的插件组，例如 `/plugin install planning@agent-toolbox`，并恢复原启用状态。
+5. 按宿主提示重新加载或新开会话，确认同名技能只加载一份。
+
+只处理本库的旧安装；上游 Ponytail、Superpowers 等独立插件按各自的 marketplace 管理。该迁移说明不自动修改本机 Claude Code 配置。
 
 ## 插件清单
 
