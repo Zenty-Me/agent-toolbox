@@ -2,7 +2,7 @@
 
 插件通过各 agent 自己的 marketplace / 包管理安装。本页收**日常开发实用**、仓库存在且近期还在维护的推荐条目（核实日期：2026-10-14），不全量镜像各官方目录。体验向（hooks / 状态栏 / 记忆 / 主题）见 Claude Code 章节的「Agent 使用体验」。
 
-本机实际安装版本另见[同步记录](local-sync.md)与[机器可读清单](installed.json)；[Pi 目录](pi/README.md)提供精确版本恢复命令，并归档 Pi Switch 和 compact-status 本地源码。
+本机当前记录按 agent 分区维护：[Pi](../pi/README.md)、[Claude Code](../claude-code/README.md)、[Codex](../codex/README.md)。[来源核对与本地补齐](completeness.md)说明缺失文件、完整插件依赖与同步结果；[首次盘点记录](local-sync.md)保留历史比较背景。
 
 | Agent | 扩展机制 | 跳转 |
 |---|---|---|
@@ -275,7 +275,7 @@
 
 ## Pi
 
-当前使用的 **9 个包 + 1 个本地状态栏扩展**见 [Pi 插件快照与恢复](pi/README.md)：涵盖搜索、子代理、视觉、浏览器、上下文查看、渲染、Pi Switch 与 Ponytail，记录精确版本和 Git commit。
+当前 Pi 包、状态栏和来源记录见 [Pi 分区](../pi/README.md)。Pi Switch 只记录[独立项目地址](https://github.com/Zenty-Me/pi-switch)，不在此重复维护源码。
 
 机制（见 [packages 文档](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/packages.md)；目录 [pi.dev/packages](https://pi.dev/packages)）：pi package 把 extensions、skills、prompt、themes 打成包。安装：`pi install npm:<包名>` / `pi install git:github.com/<owner>/<repo>`；`pi list` / `pi remove`；`-l` 写项目级 `.pi/settings.json`；`pi -e npm:<包名>` 仅本次试用。扩展会执行代码，装前看源码。
 

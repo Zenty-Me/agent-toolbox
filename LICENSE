@@ -22,9 +22,10 @@ SOFTWARE.
 
 ---
 
-NOTE: Third-party skills under skills/ and third-party plugin snapshots retain
-their original authors' copyright and licenses. See each directory's LICENSE
-file (or the license field in SKILL.md/package.json) and plugins/local-sync.md
-for source and license availability. This root license covers original content
-of this repository (README, prompts/, plugin documentation, scripts/,
-marketplace config, and repo-authored skills such as refactor-advisor).
+NOTE: Third-party skills under pi/skills/, claude-code/skills/ and codex/skills/
+retain their original authors' copyright and licenses. See each directory's
+LICENSE file (or the license field in SKILL.md/package.json) and
+plugins/completeness.md for source and license availability. This root license
+covers original content of this repository (README, prompts/, plugin
+documentation, scripts/, marketplace config, and repo-authored skills such as
+refactor-advisor).

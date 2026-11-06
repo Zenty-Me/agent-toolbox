@@ -1,120 +1,103 @@
 # Agent Dev Kit
 
-AI 协同开发工具箱：精选 Claude Code / Pi / Codex 通用开发 skills、实用插件与可复用提示词，以及 AI 编码工具的使用笔记。
+按 **Pi、Claude Code、Codex** 分区维护的个人能力同步库，保留跨项目可复用的开发和日常使用插件、skills、提示词与使用笔记。各 agent 可以重复收录同一能力，并独立记录版本和安装方式。
 
-> 仓库由 `skills-prompts` 更名为 `agent-dev-kit`；GitHub 会对旧路径做重定向，新安装请用下方命令。
+仓库原名 `skills-prompts`，GitHub 会重定向旧地址；新安装使用 `Zenty-Me/agent-dev-kit`。
 
-| 目录 | 内容 |
-|---|---|
-| **skills/** | 从各官方仓库精选的开发类 skill，可通过 Claude Code 插件市场一键安装 |
-| **plugins/** | 各 agent 的插件推荐、本机版本清单与 Pi 本地扩展源码快照 |
-| **prompts/** | 可直接当系统提示词使用的角色提示词 |
-| **agents-learning/** | Claude Code、Pi、Hermes 等工具的使用笔记 |
+## 按 agent 使用
+
+| Agent | 能力入口 | 插件来源与版本 | Skills |
+|---|---|---|---|
+| Pi | [pi/README.md](pi/README.md) | [pi/plugins.json](pi/plugins.json)：9 个包、1 个本地扩展 | 33 个 |
+| Claude Code | [claude-code/README.md](claude-code/README.md) | [claude-code/plugins.json](claude-code/plugins.json)：18 个安装记录 | 33 个 |
+| Codex | [codex/README.md](codex/README.md) | [codex/plugins.json](codex/plugins.json)：16 个开发与日常插件记录 | 33 个 |
+
+Ponytail 全套六个 skills、grill-me / grilling、技术教程、写作和日常提示词都保留。Pi 专用插件和 Next.js / Supabase 等技术栈能力也可以收录，不要求每个能力支持所有宿主。飞书、业务项目资料、账户凭据与会话历史不在同步范围。
 
 ## 项目结构
 
-```
+```text
 agent-dev-kit/
-├── .claude-plugin/
-│   └── marketplace.json   # Claude Code 插件市场配置（按用途分成 7 个插件）
-├── skills/                # 通用开发 skill 定义（每个目录一个 skill）
-├── plugins/
-│   ├── README.md          # 各 agent 插件推荐与安装方式
-│   ├── installed.json     # 本机 Pi / Claude Code / Codex 开发插件版本与来源
-│   ├── local-sync.md      # 本次扫描、版本比较与 skill 同步记录
-│   └── pi/               # Pi 恢复说明、Pi Switch 与本地状态栏源码
-├── prompts/               # 提示词模板
-├── agents-learning/       # AI 编码工具使用笔记
-├── scripts/
-│   ├── sync-skills.sh         # 从本机同步 skill 到仓库
-│   └── check-consistency.sh   # skills ≡ marketplace ≡ README 校验
-└── LICENSE                # 本仓库原创内容（skills 仍归各自上游）
+├── pi/
+│   ├── README.md
+│   ├── plugins.json
+│   ├── package.json        # 本地 Pi skills 包
+│   ├── skills/
+│   └── extensions/compact-status/
+├── claude-code/
+│   ├── README.md
+│   ├── plugins.json
+│   └── skills/
+├── codex/
+│   ├── README.md
+│   ├── plugins.json
+│   └── skills/
+├── .claude-plugin/marketplace.json
+├── prompts/
+├── agents-learning/
+├── plugins/                # 参考目录、完整性检查与历史记录
+└── scripts/                # 预览、双向同步与一致性校验
 ```
 
-## 安装 Skills
+三个 skills 目录都是独立文件，不使用跨分区符号链接。插件优先记录项目地址和安装方式；[Pi Switch](https://github.com/Zenty-Me/pi-switch) 在自己的仓库维护源码，本库不保留其完整工作副本。
 
-### 方式一：Claude Code 插件市场（推荐）
+## 快速安装
+
+在仓库根目录安装 Pi 的技能包：
 
 ```bash
+pi install ./pi
+```
+
+Claude Code 使用原有 marketplace 和插件组名称，安装路径已切换到 Claude Code 分区：
+
+```text
 /plugin marketplace add Zenty-Me/agent-dev-kit
+/plugin install planning@agent-dev-kit
+/plugin install ponytail-skills@agent-dev-kit
 ```
 
-然后按需安装插件（marketplace 名为 `agent-dev-kit`）：
-
-| 插件 | 包含的 skill |
-|---|---|
-| `coding-standards@agent-dev-kit` | karpathy-guidelines、clean-code、humanizer、concept-first-tutorial |
-| `code-quality@agent-dev-kit` | code-reviewer、refactor-advisor、security-best-practices、security-threat-model、code-simplification、test-driven-development、systematic-debugging |
-| `planning@agent-dev-kit` | brainstorming、grill-me、grilling、drawio-skill |
-| `frontend@agent-dev-kit` | frontend-design、nextjs、vercel-react-best-practices、vercel-composition-patterns、web-design-guidelines、vercel-react-view-transitions |
-| `backend@agent-dev-kit` | supabase、supabase-postgres-best-practices、python-performance-optimization |
-| `skill-dev@agent-dev-kit` | skill-creator、mcp-builder、find-skills |
-| `ponytail-skills@agent-dev-kit` | ponytail、ponytail-review、ponytail-audit、ponytail-debt、ponytail-gain、ponytail-help |
+Codex 可预览并复制选定技能；执行时加 `--apply`：
 
 ```bash
-/plugin install frontend@agent-dev-kit
+python scripts/sync_skills.py codex export grill-me grilling
+python scripts/sync_skills.py codex export grill-me grilling --apply
 ```
 
-更新：`/plugin marketplace update agent-dev-kit`。
+每个分区的完整安装方式、插件清单和技能来源见其 README。插件自带技能与本库的独立副本可按需选用，同一宿主避免重复加载。
 
-`ponytail-skills` 提供 Ponytail 5.3.3 的六个技能。自动启用、状态栏与 hooks 由 [Ponytail 原插件](https://github.com/DietrichGebert/ponytail) 提供；已装原插件时避免重复安装同名 skills。
+## 补齐与同步
 
-### 方式二：skills CLI
+维护顺序是：**核对官方来源 → 补齐本地缺失文件 → 预览差异 → 同步对应 agent → 校验 → 提交推送**。本次已执行的来源核对与本地补齐见[完整性记录](plugins/completeness.md)及[机器可读报告](plugins/completeness.json)。
 
-支持 Pi、Claude Code、Codex、Cursor 等多种 AI 工具：
+同步脚本只依赖 Python 3.10+，Windows 使用 `python`，macOS / Linux 可使用 `python3`。必须显式选择 agent 与方向：
 
 ```bash
-npx skills add Zenty-Me/agent-dev-kit                      # 交互式选择
-npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装单个 skill
+# 本机 → 仓库，默认只预览
+python scripts/sync_skills.py pi import grilling
+
+# 明确写入
+python scripts/sync_skills.py pi import grilling --apply
+
+# 仓库 → 本机
+python scripts/sync_skills.py codex export grill-me grilling --apply
+
+# 指定本地目录
+python scripts/sync_skills.py claude-code import grilling --skills-dir /path/to/local/skills
 ```
 
-### 方式三：手动复制
+默认本地目录分别为 `~/.agents/skills`、`~/.claude/skills`、`~/.codex/skills`。可用 `--skills-dir` 或 `SKILLS_DIR` 覆盖；Claude Code 兼容旧的 `CLAUDE_SKILLS_DIR`。
 
-把 `skills/` 下需要的目录复制到 `~/.agents/skills/`（Pi 等支持的共享目录）、`~/.claude/skills/` 或 `~/.codex/skills/`。也可以放到项目中对应的 skills 目录；按需挑选，避免与已安装插件里的同名 skill 重复。
+不同内容会作为冲突拒绝写入；审阅后才加 `--replace --apply`。脚本保留目标独有文件，包括 LICENSE 和本地附加资源；不自动删除、不比较版本号，也不改写 skill 指令。目标 skill 若是指向其他安装的符号链接或 Windows junction，会拒绝写入，避免影响别的 agent。写入按单文件原子替换，多文件同步不是事务；执行失败时应查看已写入文件和 Git diff 后重试。
 
-## Skills 列表
+新加或移除技能时更新对应 plugins.json 和 README；Claude Code 还需更新 marketplace。通过旧版根 `skills/` 路径安装的用户应按上述分区重新选择来源；不要对整个仓库执行不区分 agent 的技能安装。
 
-| 分类 | Skill | 说明 | 来源 |
-|---|---|---|---|
-| 编码与写作准则 | `karpathy-guidelines` | 基于 Andrej Karpathy 观察总结的 LLM 编码行为准则 | forrestchang/andrej-karpathy-skills |
-| | `clean-code` | 简洁直接的编码规范，不过度设计 | vudovn/ag-kit |
-| | `humanizer` | 去掉文字里的 AI 腔，读起来像本人写的，不改变原意 | blader/humanizer |
-| | `concept-first-tutorial` | 用解释、小例子与最小代码编写技术教程 | 本机 Codex 自定义 skill |
-| 代码质量 | `code-reviewer` | 关注安全、性能和最佳实践的代码审查 | awesome-llm-apps（Shubhamsaboo 等） |
-| | `refactor-advisor` | 识别代码坏味道并给出重构方案 | 本仓库原创 |
-| | `security-best-practices` | 按语言和框架做安全最佳实践审查 | openai/skills |
-| | `security-threat-model` | 基于仓库证据的威胁建模（信任边界、滥用路径、缓解） | openai/skills |
-| | `code-simplification` | 在不改变行为的前提下简化代码、提升可读性 | addyosmani/agent-skills |
-| | `test-driven-development` | 红绿重构驱动开发与缺陷修复 | addyosmani/agent-skills |
-| | `systematic-debugging` | 先根因再修复的系统化调试流程 | obra/superpowers |
-| 设计与规划 | `brainstorming` | 动手前的头脑风暴与需求澄清 | obra/superpowers |
-| | `grill-me` | 手动触发入口（`/grill-me`）；内部调用 `grilling` | mattpocock/skills |
-| | `grilling` | 按设计树多轮追问，打磨方案或决策 | mattpocock/skills |
-| | `drawio-skill` | 生成可编辑的 draw.io 架构图、UML、ERD、时序图 | Agents365-ai/drawio-skill |
-| 前端 | `frontend-design` | 有辨识度的前端视觉设计 | anthropics/skills |
-| | `nextjs` | Next.js App Router 开发指导（含本地 overlay） | openai/plugins（vercel/nextjs） |
-| | `vercel-react-best-practices` | Vercel 的 React/Next.js 性能优化指南 | vercel-labs/agent-skills |
-| | `vercel-composition-patterns` | React 组件组合模式 | vercel-labs/agent-skills |
-| | `web-design-guidelines` | 按 Web Interface Guidelines 审查 UI/可访问性/UX | vercel-labs/agent-skills |
-| | `vercel-react-view-transitions` | React View Transition API 与路由/共享元素动画 | vercel-labs/agent-skills |
-| 后端与数据库 | `supabase` | Supabase 开发 | supabase/agent-skills |
-| | `supabase-postgres-best-practices` | Postgres 最佳实践 | supabase/agent-skills |
-| | `python-performance-optimization` | Python 性能分析与优化 | wshobson/agents |
-| Skill 开发 | `skill-creator` | 创建、改进、评测 skill | anthropics/skills |
-| | `mcp-builder` | 设计并实现高质量 MCP server（Python/TS） | anthropics/skills |
-| | `find-skills` | 查找并安装可复用的 agent skills | vercel-labs/skills |
-| 最小实现与审查 | `ponytail` | 用最小完整改动完成开发任务 | DietrichGebert/ponytail 5.3.3 |
-| | `ponytail-review` | 审查变更的正确性、安全、负载与代码精简空间 | DietrichGebert/ponytail 5.3.3 |
-| | `ponytail-audit` | 按风险审计整个仓库 | DietrichGebert/ponytail 5.3.3 |
-| | `ponytail-debt` | 汇总 shortcut / ponytail 注释中的技术债 | DietrichGebert/ponytail 5.3.3 |
-| | `ponytail-gain` | 展示上游发布的基准测试结果 | DietrichGebert/ponytail 5.3.3 |
-| | `ponytail-help` | 模式、技能与命令速查 | DietrichGebert/ponytail 5.3.3 |
+```bash
+python scripts/check_consistency.py
+python -m unittest discover -s scripts -p "test_*.py" -v
+```
 
-**版权与许可证**
-
-- 根目录 [LICENSE](LICENSE)（MIT）覆盖本仓库**原创**内容：`README`、`prompts/`、`plugins/`、`scripts/`、marketplace 配置，以及本仓库原创 skill（如 `refactor-advisor`）。
-- `skills/` 下各 skill **版权归原作者**；许可证以各目录 `LICENSE` / `LICENSE.txt` 为准，并参考 `SKILL.md` 的 `license` 字段。收录与再分发请遵守对应上游条款；本机安装未附许可证的项目在[同步记录](plugins/local-sync.md)中注明。
-- 已去掉与 `vercel-react-best-practices` 重复的旧 `react-best-practices` 打包；前端性能规则以 Vercel 官方 skill 为准。
+CI 在 Linux、Windows、macOS 上运行。检查覆盖目录、清单、marketplace、Pi 入口、文档链接及同步行为；它不等于真实宿主中的运行验证。
 
 ## Prompts
 
@@ -142,14 +125,6 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 | [面试辅导教练](prompts/面试辅导教练.md) | 模拟面试、追问点评与示范答法 |
 | [学习教练](prompts/学习教练.md) | 学习路径、理解检验与练习闭环 |
 
-
-
-## Plugins
-
-[plugins/README.md](plugins/README.md) 按 agent 分区，收录 **Claude Code、Codex、Pi、Cursor、Gemini CLI、OpenCode** 的插件和扩展。每个分区写明该 agent 的扩展机制、推荐条目和安装命令；另有一节支持多种 agent 的通用工具（记忆、通知、多会话管理）。
-
-当前本机扫描见[同步记录](plugins/local-sync.md)与[版本清单](plugins/installed.json)。[Pi 插件恢复说明](plugins/pi/README.md)记录 9 个包的精确版本、安装来源，并保存 Pi Switch 与 compact-status 的源码快照。
-
 ## 使用笔记
 
 - [Claude Code](agents-learning/claude-code.md)：优先用本仓库 / 官方 marketplace 安装；附 `opusplan` / 子代理 model / `/advisor`、[子 agent 配置](agents-learning/claude-code.md#子-agent-配置)
@@ -160,27 +135,10 @@ npx skills add Zenty-Me/agent-dev-kit -s karpathy-guidelines -g   # 全局安装
 - [跨 agent 调用](agents-learning/cross-agent.md)：跨 harness 把对方包成工具（CLI / MCP / 桥）
 - [Hermes](agents-learning/hermes.md)：常用命令（模型配置、会话管理）
 
-## 维护
+## 插件参考与来源
 
-更新本机 skill 后同步到仓库：
+[插件参考目录](plugins/README.md) 保留其他工具和社区扩展的资料；当前三端实际记录以各自 plugins.json 为准。[首次盘点记录](plugins/local-sync.md) 保留来源比较的历史背景。
 
-```bash
-npx skills update -g -y            # 从官方源更新本机 skill
-./scripts/sync-skills.sh           # 默认读取 ~/.claude/skills
-SKILLS_DIR="$HOME/.agents/skills" ./scripts/sync-skills.sh grilling  # Pi 共享目录
-SKILLS_DIR="$HOME/.codex/skills" ./scripts/sync-skills.sh concept-first-tutorial
-```
+## 版权与许可证
 
-`sync-skills.sh` **只复制**选定来源目录里的内容，优先使用 `SKILLS_DIR`，兼容旧的 `CLAUDE_SKILLS_DIR`，默认 `~/.claude/skills`。执行前先核对来源版本与 diff；不同宿主可能保留较旧版本、同名不同实现或本地修复，不应整库覆盖。新增或下线 skill 时，还须**手动**更新：
-
-1. `.claude-plugin/marketplace.json` 对应插件的 `skills` 列表
-2. 上文「安装 Skills」插件表与「Skills 列表」
-3. 各 skill 目录下的 `LICENSE`（从上游同步）
-
-然后跑一致性检查：
-
-```bash
-./scripts/check-consistency.sh
-```
-
-CI：push 到 main 或提 PR 时，[.github/workflows/check-consistency.yml](.github/workflows/check-consistency.yml) 会自动跑该检查。
+根目录 [LICENSE](LICENSE) 覆盖本仓库原创文档、脚本、配置和原创内容。各 agent 的 skills 及独立扩展以各自许可证为准；目录迁移保留其作者、正文、脚本、资源与许可证。`concept-first-tutorial` 是本机自定义技能，没有独立许可证，已在完整性说明中注明。

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-06T06:48:52+00:00",
+  "scope": "Reusable development and everyday capabilities; business-specific skills and credentials are excluded.",
+  "skillsBaseline": {
+    "repositoryCommit": "061e55c39e1a37d27bbabcb94e78f9cb4a579a6c",
+    "note": "Independent original copies of the existing 33 repository skills. Skill instructions were not rewritten; verified missing resources were completed locally before export. Plugin versions are observations, not proof that standalone skills are loaded."
+  },
+  "skills": [
+    "brainstorming",
+    "clean-code",
+    "code-reviewer",
+    "code-simplification",
+    "concept-first-tutorial",
+    "drawio-skill",
+    "find-skills",
+    "frontend-design",
+    "grill-me",
+    "grilling",
+    "humanizer",
+    "karpathy-guidelines",
+    "mcp-builder",
+    "nextjs",
+    "ponytail",
+    "ponytail-audit",
+    "ponytail-debt",
+    "ponytail-gain",
+    "ponytail-help",
+    "ponytail-review",
+    "python-performance-optimization",
+    "refactor-advisor",
+    "security-best-practices",
+    "security-threat-model",
+    "skill-creator",
+    "supabase",
+    "supabase-postgres-best-practices",
+    "systematic-debugging",
+    "test-driven-development",
+    "vercel-composition-patterns",
+    "vercel-react-best-practices",
+    "vercel-react-view-transitions",
+    "web-design-guidelines"
+  ],
+  "agent": "claude-code",
+  "plugins": [
+    {
+      "id": "code-review@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:27:49.196Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install code-review@claude-plugins-official"
+    },
+    {
+      "id": "code-simplifier@claude-plugins-official",
+      "version": "1.0.0",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "df202fe49d81404902cf785b64c1c5f9cc0b0315",
+      "lastUpdated": "2026-09-29T03:11:06.732Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install code-simplifier@claude-plugins-official"
+    },
+    {
+      "id": "commit-commands@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:27:52.837Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install commit-commands@claude-plugins-official"
+    },
+    {
+      "id": "context7@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:27:54.736Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install context7@claude-plugins-official"
+    },
+    {
+      "id": "debugging-toolkit@claude-code-workflows",
+      "version": "1.2.1",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "156b7a5e7a8b93642628a339ee4039c925b34c7f",
+      "lastUpdated": "2026-09-29T03:11:37.508Z",
+      "marketplaceSource": "wshobson/agents",
+      "install": "/plugin install debugging-toolkit@claude-code-workflows"
+    },
+    {
+      "id": "feature-dev@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:28:10.741Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install feature-dev@claude-plugins-official"
+    },
+    {
+      "id": "frontend-design@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-10-07T04:57:53.281Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install frontend-design@claude-plugins-official"
+    },
+    {
+      "id": "mattpocock-skills@claude-plugins-official",
+      "version": "1.2.3",
+      "scope": "user",
+      "configuredEnabled": true,
+      "commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+      "lastUpdated": "2026-10-10T01:01:41.429Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install mattpocock-skills@claude-plugins-official"
+    },
+    {
+      "id": "playwright@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:28:22.571Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install playwright@claude-plugins-official"
+    },
+    {
+      "id": "ponytail@ponytail",
+      "version": "5.1.0",
+      "scope": "user",
+      "configuredEnabled": true,
+      "commit": "9cc65d03aa2da1db7121b912d03596409ee340b8",
+      "lastUpdated": "2026-10-09T08:21:53.400Z",
+      "marketplaceSource": "DietrichGebert/ponytail",
+      "install": "/plugin install ponytail@ponytail"
+    },
+    {
+      "id": "postgres-best-practices@supabase-agent-skills",
+      "version": "544bfc56c89a",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "544bfc56c89afe2b87b20017a59b2c6e9502a1fb",
+      "lastUpdated": "2026-09-29T03:11:35.524Z",
+      "marketplaceSource": "supabase/agent-skills",
+      "install": "/plugin install postgres-best-practices@supabase-agent-skills"
+    },
+    {
+      "id": "pr-review-toolkit@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:28:37.703Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install pr-review-toolkit@claude-plugins-official"
+    },
+    {
+      "id": "ralph-loop@claude-plugins-official",
+      "version": "1.0.0",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "76b35e91d1c99c090b1a08dade53bcc5e352c1b2",
+      "lastUpdated": "2026-05-08T04:33:37.220Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install ralph-loop@claude-plugins-official"
+    },
+    {
+      "id": "security-guidance@claude-plugins-official",
+      "version": "2.0.8",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "df202fe49d81404902cf785b64c1c5f9cc0b0315",
+      "lastUpdated": "2026-09-29T03:16:13.126Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install security-guidance@claude-plugins-official"
+    },
+    {
+      "id": "skill-creator@claude-plugins-official",
+      "version": "fbe07fb6ce7d",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "fbe07fb6ce7d51d8e86ca6efdf050059894cdb80",
+      "lastUpdated": "2026-09-29T03:28:43.548Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install skill-creator@claude-plugins-official"
+    },
+    {
+      "id": "supabase@supabase-agent-skills",
+      "version": "544bfc56c89a",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "544bfc56c89afe2b87b20017a59b2c6e9502a1fb",
+      "lastUpdated": "2026-09-29T03:11:33.342Z",
+      "marketplaceSource": "supabase/agent-skills",
+      "install": "/plugin install supabase@supabase-agent-skills"
+    },
+    {
+      "id": "superpowers@claude-plugins-official",
+      "version": "6.4.1",
+      "scope": "user",
+      "configuredEnabled": null,
+      "commit": "6fd4507659784c351abbd2bc264c7162cfd386dc",
+      "lastUpdated": "2026-09-29T03:16:11.084Z",
+      "marketplaceSource": "anthropics/claude-plugins-official",
+      "install": "/plugin install superpowers@claude-plugins-official"
+    },
+    {
+      "id": "warp@claude-code-warp",
+      "version": "2.4.0",
+      "scope": "user",
+      "configuredEnabled": true,
+      "commit": "53ab8d63ef74d7653002444762812d2fb5639eee",
+      "lastUpdated": "2026-10-29T01:01:42.201Z",
+      "marketplaceSource": "warpdotdev/claude-code-warp",
+      "install": "/plugin install warp@claude-code-warp"
+    }
+  ],
+  "marketplaces": {
+    "anthropic-agent-skills": {
+      "source": "github",
+      "repo": "anthropics/skills"
+    },
+    "claude-code-warp": {
+      "source": "github",
+      "repo": "warpdotdev/claude-code-warp"
+    },
+    "claude-code-workflows": {
+      "source": "github",
+      "repo": "wshobson/agents"
+    },
+    "claude-plugins-official": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "humanizer": {
+      "source": "github",
+      "repo": "blader/humanizer"
+    },
+    "planning-with-files": {
+      "source": "github",
+      "repo": "OthmanAdi/planning-with-files"
+    },
+    "ponytail": {
+      "source": "github",
+      "repo": "DietrichGebert/ponytail"
+    },
+    "supabase-agent-skills": {
+      "source": "github",
+      "repo": "supabase/agent-skills"
+    },
+    "web-access": {
+      "source": "git",
+      "url": "https://github.com/eze-is/web-access.git"
+    }
+  },
+  "stateNote": "configuredEnabled=null means present in the installation registry without an explicit enabledPlugins entry; it is not proof of a loaded plugin.",
+  "externalDependencies": [
+    {
+      "name": "ag-kit",
+      "repository": "https://github.com/vudovn/ag-kit",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "version": "2026.8.31",
+      "usedBy": [
+        "clean-code"
+      ],
+      "note": "Complete toolkit source is available locally under ~/.agents/vendor/ag-kit. Its audit scripts require the AG Kit workspace layout; do not merge its frontend-design into the Anthropic skill of the same name."
+    },
+    {
+      "name": "superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "version": "7.0.2",
+      "usedBy": [
+        "brainstorming",
+        "systematic-debugging"
+      ],
+      "note": "Complete skills and host adapters are available locally under ~/.agents/vendor/superpowers. Source downloaded without enabling hooks. Prefer the full upstream plugin when its namespaced workflow is needed."
+    }
+  ]
+}

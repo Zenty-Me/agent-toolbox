@@ -1,0 +1,518 @@
+{
+  "date": "2026-11-06",
+  "order": "Remote verification, missing-file restoration on this machine, then repository export.",
+  "originalInstructionsPreserved": true,
+  "skills": [
+    {
+      "skill": "brainstorming",
+      "source": "obra/superpowers",
+      "tree": "03d4c6657cd20ba0fce9d270fc688150bd191c3b",
+      "installations": []
+    },
+    {
+      "skill": "clean-code",
+      "source": "vudovn/ag-kit",
+      "tree": "12edb7963ec053bb7f866ab14490ee8a9b4d2e51",
+      "installations": [
+        {
+          "local": "~/.agents/skills/clean-code",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        },
+        {
+          "local": "~/.claude/skills/clean-code",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.codex/skills/clean-code",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        }
+      ]
+    },
+    {
+      "skill": "drawio-skill",
+      "source": "Agents365-ai/drawio-skill",
+      "tree": "15f4de95d40dd2889e8b2c2f3499fdcf67cbfff0",
+      "installations": [
+        {
+          "local": "~/.agents/skills/drawio-skill",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.claude/skills/drawio-skill",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.codex/skills/drawio-skill",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        }
+      ]
+    },
+    {
+      "skill": "find-skills",
+      "source": "vercel-labs/skills",
+      "tree": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installations": [
+        {
+          "local": "~/.agents/skills/find-skills",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.claude/skills/find-skills",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.codex/skills/find-skills",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        }
+      ]
+    },
+    {
+      "skill": "frontend-design",
+      "source": "anthropics/skills",
+      "tree": "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6",
+      "installations": [
+        {
+          "local": "~/.agents/skills/frontend-design",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        },
+        {
+          "local": "~/.claude/skills/frontend-design",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.codex/skills/frontend-design",
+          "matchesLockedUpstream": false,
+          "missingFiles": [],
+          "variantPreserved": true
+        }
+      ]
+    },
+    {
+      "skill": "grill-me",
+      "source": "mattpocock/skills",
+      "tree": "3df14e2d3a89459bf300614be9247e3ce74798f8",
+      "installations": [
+        {
+          "local": "~/.agents/skills/grill-me",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "grilling",
+      "source": "mattpocock/skills",
+      "tree": "f551b6e0d219fdda0b6abf277f8f915b3127d1e9",
+      "installations": [
+        {
+          "local": "~/.agents/skills/grilling",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "karpathy-guidelines",
+      "source": "forrestchang/andrej-karpathy-skills",
+      "tree": "e119339197d600aa39a24fd7a95c946800c9c949",
+      "installations": [
+        {
+          "local": "~/.agents/skills/karpathy-guidelines",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.codex/skills/karpathy-guidelines",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "python-performance-optimization",
+      "source": "wshobson/agents",
+      "tree": "f7d93ea51a12291d0a120dfb9db300c87d8750f6",
+      "installations": [
+        {
+          "local": "~/.agents/skills/python-performance-optimization",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "security-best-practices",
+      "source": "openai/skills",
+      "tree": "349d45885fd3e432e7d0e5c6e21a2a712db158ef",
+      "installations": [
+        {
+          "local": "~/.agents/skills/security-best-practices",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "skill-creator",
+      "source": "anthropics/skills",
+      "tree": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
+      "installations": [
+        {
+          "local": "~/.agents/skills/skill-creator",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        },
+        {
+          "local": "~/.claude/skills/skill-creator",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "supabase",
+      "source": "supabase/agent-skills",
+      "tree": "57b975708a53ce7a56df25822871b71da6d9312a",
+      "installations": [
+        {
+          "local": "~/.agents/skills/supabase",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "supabase-postgres-best-practices",
+      "source": "supabase/agent-skills",
+      "tree": "27bde25111c4cd5e6f803fc9db5fbffe27bb26cf",
+      "installations": [
+        {
+          "local": "~/.agents/skills/supabase-postgres-best-practices",
+          "matchesLockedUpstream": true,
+          "missingFiles": [],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "vercel-composition-patterns",
+      "source": "vercel-labs/agent-skills",
+      "tree": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "installations": [
+        {
+          "local": "~/.agents/skills/vercel-composition-patterns",
+          "matchesLockedUpstream": true,
+          "missingFiles": [
+            "metadata.json"
+          ],
+          "variantPreserved": false
+        }
+      ]
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "source": "vercel-labs/agent-skills",
+      "tree": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installations": [
+        {
+          "local": "~/.agents/skills/vercel-react-best-practices",
+          "matchesLockedUpstream": true,
+          "missingFiles": [
+            "metadata.json"
+          ],
+          "variantPreserved": false
+        }
+      ]
+    }
+  ],
+  "npmPackages": [
+    {
+      "package": "pi-web-access",
+      "version": "0.40.0",
+      "verifiedPublishedFiles": 99,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-subagents",
+      "version": "0.78.0",
+      "verifiedPublishedFiles": 1331,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-vision-handoff",
+      "version": "0.10.9",
+      "verifiedPublishedFiles": 15,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-context-view",
+      "version": "0.7.1",
+      "verifiedPublishedFiles": 55,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-browser-use",
+      "version": "0.12.12",
+      "verifiedPublishedFiles": 68,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-code-render",
+      "version": "0.1.9",
+      "verifiedPublishedFiles": 5,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    },
+    {
+      "package": "pi-better-render",
+      "version": "0.3.0",
+      "verifiedPublishedFiles": 67,
+      "missingFiles": [],
+      "modifiedFilesPreserved": []
+    }
+  ],
+  "restoredLocalFiles": [
+    "~/.agents/skills/find-skills/LICENSE",
+    "~/.agents/skills/grill-me/LICENSE",
+    "~/.agents/skills/grilling/LICENSE",
+    "~/.agents/skills/nextjs/async-patterns.md",
+    "~/.agents/skills/nextjs/bundling.md",
+    "~/.agents/skills/nextjs/data-patterns.md",
+    "~/.agents/skills/nextjs/debug-tricks.md",
+    "~/.agents/skills/nextjs/directives.md",
+    "~/.agents/skills/nextjs/error-handling.md",
+    "~/.agents/skills/nextjs/file-conventions.md",
+    "~/.agents/skills/nextjs/font.md",
+    "~/.agents/skills/nextjs/functions.md",
+    "~/.agents/skills/nextjs/hydration-error.md",
+    "~/.agents/skills/nextjs/image.md",
+    "~/.agents/skills/nextjs/metadata.md",
+    "~/.agents/skills/nextjs/parallel-routes.md",
+    "~/.agents/skills/nextjs/route-handlers.md",
+    "~/.agents/skills/nextjs/rsc-boundaries.md",
+    "~/.agents/skills/nextjs/runtime-selection.md",
+    "~/.agents/skills/nextjs/scripts.md",
+    "~/.agents/skills/nextjs/self-hosting.md",
+    "~/.agents/skills/nextjs/suspense-boundaries.md",
+    "~/.agents/skills/nextjs/upstream/async-patterns.md",
+    "~/.agents/skills/nextjs/upstream/bundling.md",
+    "~/.agents/skills/nextjs/upstream/data-patterns.md",
+    "~/.agents/skills/nextjs/upstream/debug-tricks.md",
+    "~/.agents/skills/nextjs/upstream/directives.md",
+    "~/.agents/skills/nextjs/upstream/error-handling.md",
+    "~/.agents/skills/nextjs/upstream/file-conventions.md",
+    "~/.agents/skills/nextjs/upstream/font.md",
+    "~/.agents/skills/nextjs/upstream/functions.md",
+    "~/.agents/skills/nextjs/upstream/hydration-error.md",
+    "~/.agents/skills/nextjs/upstream/image.md",
+    "~/.agents/skills/nextjs/upstream/metadata.md",
+    "~/.agents/skills/nextjs/upstream/parallel-routes.md",
+    "~/.agents/skills/nextjs/upstream/route-handlers.md",
+    "~/.agents/skills/nextjs/upstream/rsc-boundaries.md",
+    "~/.agents/skills/nextjs/upstream/runtime-selection.md",
+    "~/.agents/skills/nextjs/upstream/scripts.md",
+    "~/.agents/skills/nextjs/upstream/self-hosting.md",
+    "~/.agents/skills/nextjs/upstream/suspense-boundaries.md",
+    "~/.agents/skills/python-performance-optimization/LICENSE",
+    "~/.agents/skills/supabase-postgres-best-practices/LICENSE",
+    "~/.agents/skills/supabase/LICENSE",
+    "~/.agents/skills/vercel-composition-patterns/metadata.json",
+    "~/.agents/skills/vercel-react-best-practices/metadata.json",
+    "~/.claude/skills/clean-code/LICENSE"
+  ],
+  "exportedResources": [
+    "pi/skills/nextjs/async-patterns.md",
+    "claude-code/skills/nextjs/async-patterns.md",
+    "codex/skills/nextjs/async-patterns.md",
+    "pi/skills/nextjs/bundling.md",
+    "claude-code/skills/nextjs/bundling.md",
+    "codex/skills/nextjs/bundling.md",
+    "pi/skills/nextjs/data-patterns.md",
+    "claude-code/skills/nextjs/data-patterns.md",
+    "codex/skills/nextjs/data-patterns.md",
+    "pi/skills/nextjs/debug-tricks.md",
+    "claude-code/skills/nextjs/debug-tricks.md",
+    "codex/skills/nextjs/debug-tricks.md",
+    "pi/skills/nextjs/directives.md",
+    "claude-code/skills/nextjs/directives.md",
+    "codex/skills/nextjs/directives.md",
+    "pi/skills/nextjs/error-handling.md",
+    "claude-code/skills/nextjs/error-handling.md",
+    "codex/skills/nextjs/error-handling.md",
+    "pi/skills/nextjs/file-conventions.md",
+    "claude-code/skills/nextjs/file-conventions.md",
+    "codex/skills/nextjs/file-conventions.md",
+    "pi/skills/nextjs/font.md",
+    "claude-code/skills/nextjs/font.md",
+    "codex/skills/nextjs/font.md",
+    "pi/skills/nextjs/functions.md",
+    "claude-code/skills/nextjs/functions.md",
+    "codex/skills/nextjs/functions.md",
+    "pi/skills/nextjs/hydration-error.md",
+    "claude-code/skills/nextjs/hydration-error.md",
+    "codex/skills/nextjs/hydration-error.md",
+    "pi/skills/nextjs/image.md",
+    "claude-code/skills/nextjs/image.md",
+    "codex/skills/nextjs/image.md",
+    "pi/skills/nextjs/metadata.md",
+    "claude-code/skills/nextjs/metadata.md",
+    "codex/skills/nextjs/metadata.md",
+    "pi/skills/nextjs/parallel-routes.md",
+    "claude-code/skills/nextjs/parallel-routes.md",
+    "codex/skills/nextjs/parallel-routes.md",
+    "pi/skills/nextjs/route-handlers.md",
+    "claude-code/skills/nextjs/route-handlers.md",
+    "codex/skills/nextjs/route-handlers.md",
+    "pi/skills/nextjs/rsc-boundaries.md",
+    "claude-code/skills/nextjs/rsc-boundaries.md",
+    "codex/skills/nextjs/rsc-boundaries.md",
+    "pi/skills/nextjs/runtime-selection.md",
+    "claude-code/skills/nextjs/runtime-selection.md",
+    "codex/skills/nextjs/runtime-selection.md",
+    "pi/skills/nextjs/scripts.md",
+    "claude-code/skills/nextjs/scripts.md",
+    "codex/skills/nextjs/scripts.md",
+    "pi/skills/nextjs/self-hosting.md",
+    "claude-code/skills/nextjs/self-hosting.md",
+    "codex/skills/nextjs/self-hosting.md",
+    "pi/skills/nextjs/suspense-boundaries.md",
+    "claude-code/skills/nextjs/suspense-boundaries.md",
+    "codex/skills/nextjs/suspense-boundaries.md",
+    "pi/skills/nextjs/upstream/async-patterns.md",
+    "claude-code/skills/nextjs/upstream/async-patterns.md",
+    "codex/skills/nextjs/upstream/async-patterns.md",
+    "pi/skills/nextjs/upstream/bundling.md",
+    "claude-code/skills/nextjs/upstream/bundling.md",
+    "codex/skills/nextjs/upstream/bundling.md",
+    "pi/skills/nextjs/upstream/data-patterns.md",
+    "claude-code/skills/nextjs/upstream/data-patterns.md",
+    "codex/skills/nextjs/upstream/data-patterns.md",
+    "pi/skills/nextjs/upstream/debug-tricks.md",
+    "claude-code/skills/nextjs/upstream/debug-tricks.md",
+    "codex/skills/nextjs/upstream/debug-tricks.md",
+    "pi/skills/nextjs/upstream/directives.md",
+    "claude-code/skills/nextjs/upstream/directives.md",
+    "codex/skills/nextjs/upstream/directives.md",
+    "pi/skills/nextjs/upstream/error-handling.md",
+    "claude-code/skills/nextjs/upstream/error-handling.md",
+    "codex/skills/nextjs/upstream/error-handling.md",
+    "pi/skills/nextjs/upstream/file-conventions.md",
+    "claude-code/skills/nextjs/upstream/file-conventions.md",
+    "codex/skills/nextjs/upstream/file-conventions.md",
+    "pi/skills/nextjs/upstream/font.md",
+    "claude-code/skills/nextjs/upstream/font.md",
+    "codex/skills/nextjs/upstream/font.md",
+    "pi/skills/nextjs/upstream/functions.md",
+    "claude-code/skills/nextjs/upstream/functions.md",
+    "codex/skills/nextjs/upstream/functions.md",
+    "pi/skills/nextjs/upstream/hydration-error.md",
+    "claude-code/skills/nextjs/upstream/hydration-error.md",
+    "codex/skills/nextjs/upstream/hydration-error.md",
+    "pi/skills/nextjs/upstream/image.md",
+    "claude-code/skills/nextjs/upstream/image.md",
+    "codex/skills/nextjs/upstream/image.md",
+    "pi/skills/nextjs/upstream/metadata.md",
+    "claude-code/skills/nextjs/upstream/metadata.md",
+    "codex/skills/nextjs/upstream/metadata.md",
+    "pi/skills/nextjs/upstream/parallel-routes.md",
+    "claude-code/skills/nextjs/upstream/parallel-routes.md",
+    "codex/skills/nextjs/upstream/parallel-routes.md",
+    "pi/skills/nextjs/upstream/route-handlers.md",
+    "claude-code/skills/nextjs/upstream/route-handlers.md",
+    "codex/skills/nextjs/upstream/route-handlers.md",
+    "pi/skills/nextjs/upstream/rsc-boundaries.md",
+    "claude-code/skills/nextjs/upstream/rsc-boundaries.md",
+    "codex/skills/nextjs/upstream/rsc-boundaries.md",
+    "pi/skills/nextjs/upstream/runtime-selection.md",
+    "claude-code/skills/nextjs/upstream/runtime-selection.md",
+    "codex/skills/nextjs/upstream/runtime-selection.md",
+    "pi/skills/nextjs/upstream/scripts.md",
+    "claude-code/skills/nextjs/upstream/scripts.md",
+    "codex/skills/nextjs/upstream/scripts.md",
+    "pi/skills/nextjs/upstream/self-hosting.md",
+    "claude-code/skills/nextjs/upstream/self-hosting.md",
+    "codex/skills/nextjs/upstream/self-hosting.md",
+    "pi/skills/nextjs/upstream/suspense-boundaries.md",
+    "claude-code/skills/nextjs/upstream/suspense-boundaries.md",
+    "codex/skills/nextjs/upstream/suspense-boundaries.md"
+  ],
+  "externalDependencies": [
+    {
+      "name": "ag-kit",
+      "repository": "https://github.com/vudovn/ag-kit",
+      "commit": "549ba3dc2eb1d40fccb5b6d792eba4101c80cd69",
+      "version": "2026.8.31",
+      "usedBy": [
+        "clean-code"
+      ],
+      "note": "Complete toolkit source is available locally under ~/.agents/vendor/ag-kit. Its audit scripts require the AG Kit workspace layout; do not merge its frontend-design into the Anthropic skill of the same name."
+    },
+    {
+      "name": "superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "version": "7.0.2",
+      "usedBy": [
+        "brainstorming",
+        "systematic-debugging"
+      ],
+      "note": "Complete skills and host adapters are available locally under ~/.agents/vendor/superpowers. Source downloaded without enabling hooks. Prefer the full upstream plugin when its namespaced workflow is needed."
+    }
+  ],
+  "claudePluginResourceCheck": {
+    "checkedDeclaredPaths": 26,
+    "missing": []
+  },
+  "codexPluginResourceCheck": {
+    "checkedDeclaredPaths": 16,
+    "missing": []
+  },
+  "nextjsSource": {
+    "repository": "https://github.com/vercel-labs/next-skills",
+    "historicalCommit": "dc1de9caf7612d73f56a8dec3cb1bd6c9ec096b9",
+    "currentHome": "https://github.com/vercel/next.js/tree/canary/skills",
+    "note": "The legacy skill has moved upstream. Matching historical reference files were restored without rewriting the local wrapper."
+  },
+  "limitations": [
+    "Different local SKILL.md variants were preserved rather than overwritten.",
+    "Unknown-source custom skills were not replaced.",
+    "Complete dependency toolkits were downloaded without enabling their host hooks.",
+    "Source completeness is not a guarantee of cross-host tool compatibility."
+  ]
+}

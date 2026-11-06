@@ -2,11 +2,11 @@
 
 扫描日期：2026-11-06。先将本仓库快进到远端 `102cd90`，再比较本机 Pi、Claude Code、Codex 的安装内容。此记录以本机安装版本为依据；本次未升级这些工具的安装，也未查询全部插件的远端最新版本。
 
-同步范围为通用软件开发：编码、设计规划、审查、调试、性能、skill 开发与技术教程。快照入口：
+## 当前目录与历史范围
 
-- [installed.json](installed.json)：精确版本、启用配置、Git commit、npm integrity 与源码摘要。
-- [pi/README.md](pi/README.md)：9 个 Pi 包及 1 个本地扩展的恢复命令。
-- [../skills/](../skills/)：同步后共 33 个通用开发 skills。
+本页是首次盘点的历史记录；后续整理已将能力分为 [Pi](../pi/README.md)、[Claude Code](../claude-code/README.md)、[Codex](../codex/README.md)。每区保存独立 skills 与 plugins.json，开发和日常使用内容均保留。来源核对与先补齐本地再同步的结果见[完整性说明](completeness.md)。
+
+首次盘点曾保存 Pi Switch 工作副本；按后续确认现已移除重复源码，仅保留[项目地址](https://github.com/Zenty-Me/pi-switch)与安装记录，旧快照可从提交 `061e55c` 恢复。
 
 ## 本次文件同步
 
@@ -100,4 +100,4 @@
 
 `concept-first-tutorial` 的本机目录没有独立 LICENSE、上游地址或版本号；按本机自定义内容记录，未给它编造上游版本或许可证。
 
-Pi Switch 的类型检查和 48 个测试通过。原工作副本、本机插件安装、认证和开关设置均保持原状。
+首次归档时，Pi Switch 的类型检查和 48 个测试通过；当前源码由独立项目维护。后续目录整理和缺失资源补齐均未改写原有 skill 正文。

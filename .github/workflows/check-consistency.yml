@@ -1,4 +1,4 @@
-name: Check skill consistency
+name: Check agent capability inventories
 
 on:
   push:
@@ -7,8 +7,16 @@ on:
 
 jobs:
   consistency:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Run consistency check
-        run: ./scripts/check-consistency.sh
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check per-agent inventories and links
+        run: python scripts/check_consistency.py
+      - name: Test preview, conflict handling and synchronization
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
